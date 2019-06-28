@@ -1,31 +1,39 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
   margin: 0px;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-h1,
 body,
 html,
 main {
   margin: 0;
-  font-size: 20px;
   font-family: "Roboto", sans-serif;
-  font-size: 50px;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
+.page-top-bar,
+.page-top-bar a {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.8;
+  font-size: 16px;
+}
+.page-top-bar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #d1af78;
+  color: #555555;
 }
 header {
-  background: #858585;
-  height: 450px;
-  border: solid 4px orange;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
+
 /* Medium screens */
 @media all and (max-width: 800px) {
   header {
@@ -33,33 +41,48 @@ header {
     justify-content: space-around;
   }
 }
+
 /* Small screens */
 @media all and (max-width: 500px) {
   header {
     /* On small screens, we are no longer using row direction but column */
+
     flex-direction: column;
   }
 }
-
-.image-logo {
-  width: 200px;
-  height: 200px;
-  border: solid 4px red;
+.name-title {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-left: 40px;
 }
-
 nav {
-  border: solid 4px yellow;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 li {
   display: inline-block;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 a {
   text-decoration: none;
+  color: black;
 }
-.container {
-  border: solid 4px black;
+a:hover {
+  color: #d1af78;
+}
 
+.jumbo-image {
+  background-image: url(https://jofremoreno.com/wp-content/uploads/2019/06/DSC_6807-319.jpg);
+  height: 450px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.container {
   margin: 20px;
   display: flex; /* or inline-flex */
   flex-wrap: wrap;
@@ -85,5 +108,4 @@ p {
 
 footer {
   border: solid 4px magenta;
-  background: greenyellow;
 }
